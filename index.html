@@ -109,7 +109,250 @@
         </div>
     </div>
 </section>
+<style>
+    .experience-section {
+        padding: 60px 0;
+    }
 
+    .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 31px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #8b572a;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 60px;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+        width: 24px;
+        height: 24px;
+        background: #8b572a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        border: 4px solid #fdfaf5;
+    }
+
+    .experience-card {
+        background: #fff;
+        border: 1px solid #e0d5c5;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .experience-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(139, 87, 42, 0.1);
+    }
+
+    .time-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        background: #d4a373;
+        color: white;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .job-title {
+        font-size: 1.4rem;
+        color: #4a332d;
+        margin: 0 0 5px 0;
+        font-weight: bold;
+    }
+
+    .company-name {
+        font-size: 1.1rem;
+        color: #8b572a;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .experience-list {
+        margin: 0;
+        padding-left: 20px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .experience-list li {
+        margin-bottom: 8px;
+        list-style-type: "★ ";
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 2rem;
+        color: #4a332d;
+        margin: 60px 0 40px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+</style>
+
+<section class="experience-section">
+    <div class="container">
+        
+        <h2 class="section-subtitle">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Aug 2025 – Present</span>
+                    <h3 class="job-title">Instructional Design & EdTech Intern</h3>
+                    <div class="company-name">People Powered</div>
+                    <ul class="experience-list">
+                        <li>Administer TalentLMS platform and support the design of user-centered learning experiences for the "Climate" program</li>
+                        <li>Revitalize curriculum content for nine core sessions based on user feedback and learning analytics</li>
+                        <li>Collaborate with cross-functional teams to enhance platform usability and learner engagement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Aug 2024 – Nov 2025</span>
+                    <h3 class="job-title">Graduate Research Assistant — GenAI in Collaborative Learning</h3>
+                    <div class="company-name">School of Education, UNC-Chapel Hill</div>
+                    <ul class="experience-list">
+                        <li>Co-authored research on human-AI interaction in collaborative learning, with implications for UX design in educational tools</li>
+                        <li>Prototyped transparency features (e.g., "Model Cards") to support critical evaluation of AI outputs</li>
+                        <li>Facilitated focus groups and conducted thematic analysis on user transcripts to inform product design decisions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Feb 2023 – Jun 2023</span>
+                    <h3 class="job-title">Product Intern</h3>
+                    <div class="company-name">Tomorrow Advancing Life (TAL)</div>
+                    <ul class="experience-list">
+                        <li>Collaborated with cross-functional teams to launch K-12 digital and physical learning products</li>
+                        <li>Contributed to product requirement documentation and user journey mapping</li>
+                        <li>Analyzed user behavior to inform product iterations and feature prioritization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Jun 2022 – Aug 2022</span>
+                    <h3 class="job-title">New Media Operation Intern</h3>
+                    <div class="company-name">Xuetang Online Technology (MOOC)</div>
+                    <ul class="experience-list">
+                        <li>Analyzed platform metrics and user feedback to identify content gaps and usability issues</li>
+                        <li>Supported content iteration and interface improvements based on user insights</li>
+                        <li>Collaborated with design and content teams to enhance user engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-subtitle">Academic Projects & Research</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Aug 2024 – Nov 2025</span>
+                    <h3 class="job-title">"Contextualizing Trust" — Human-LLM Interaction Study</h3>
+                    <ul class="experience-list">
+                        <li>Investigated user trust and transparency in AI-mediated learning environments</li>
+                        <li>Designed and tested prototype features to support learner autonomy and critical thinking</li>
+                        <li>Presented findings to interdisciplinary audiences, contributing to product-informed research</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Dec 2021 – Dec 2022</span>
+                    <h3 class="job-title">"Interpreting Subjects and Text Boundaries" — Independent Research</h3>
+                    <div class="company-name">Beijing Normal University</div>
+                    <ul class="experience-list">
+                        <li>Explored interpretive frameworks in secondary school reading instruction</li>
+                        <li>Analyzed pedagogical models from student, teacher, and policy perspectives</li>
+                        <li>Developed foundational understanding of learner-centered design and curriculum analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-subtitle">Tutoring & Teaching</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Nov 2023 – Oct 2024</span>
+                    <h3 class="job-title">English Tutor (Online)</h3>
+                    <ul class="experience-list">
+                        <li>Designed personalized learning plans for 9 students preparing for the TOEFL exam</li>
+                        <li>Used diagnostic data to tailor instruction and improve learning outcomes</li>
+                        <li>Developed intuitive learning materials and tracked user progress over time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Jun 2023 – Aug 2023</span>
+                    <h3 class="job-title">Teaching Assistant</h3>
+                    <div class="company-name">St. Anthony School, Oakland, CA</div>
+                    <ul class="experience-list">
+                        <li>Facilitated group lessons and interactive activities for culturally diverse students</li>
+                        <li>Adapted teaching strategies to individual learning styles and strengths</li>
+                        <li>Supported student engagement through inclusive practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-subtitle">Leadership & Extracurricular</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-card">
+                    <span class="time-tag">Sep 2021 – Sep 2022</span>
+                    <h3 class="job-title">Director of Publicity Department</h3>
+                    <div class="company-name">Student Union, Beijing Normal University</div>
+                    <ul class="experience-list">
+                        <li>Led a design team to create 10+ promotional assets for the "Master of Literature" program</li>
+                        <li>Managed end-to-end visual design and branding for campus events</li>
+                        <li>Increased audience engagement by 2x through targeted content strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
     <!-- Expertise Section -->
     <section id="expertise" class="expertise-section">
         <div class="container">

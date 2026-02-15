@@ -41,48 +41,74 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">
-                        I am an instructional designer and researcher passionate about using generative AI
-                         to create inclusive and accessible learning experiences for global audiences.
-                    </p>
-                    <p>
-                        With a multidimensional background spanning academic research, 
-                        EdTech product development, and global non-profits across the U.S. and China,
-                        I specialize in bridging pedagogical theory with emerging technology.
-                        My experience ranges from optimizing MOOC operations and K-12 products 
-                        to designing AI-integrated curricula for adult learners. 
-                        I combine rigorous user research with data-driven instructional design 
-                        to build scalable, inclusive learning ecosystems that drive engagement and performance.
-                    </p>
-                    <p>
-                        I believe AI is not a replacement for human connection,
-                        but a bridge to overcome resource barriers and dismantle educational inequality. 
-                        I strive to leverage technology to democratize access to high-quality learning for all.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">22+</span>
-                        <span class="stat-label">In-Depth User Studies</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">2x</span>
-                        <span class="stat-label">Participation Growth</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Thousands of</span>
-                        <span class="stat-label">Learners Impacted</span>
-                    </div>
-                </div>
+  <style>
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+        margin-top: 40px;
+    }
+
+    .about-image {
+        flex: 0 0 350px;
+    }
+
+    .profile-pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        display: block;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        .about-image {
+            flex: 0 0 250px;
+            width: 250px;
+        }
+    }
+</style>
+
+<section id="about" class="about-section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="headshot.JPG" alt="Yujing Zhang" class="profile-pic">
+            </div>
+            <div class="about-text">
+                <p class="lead">
+                    I am an instructional designer and researcher passionate about using generative AI
+                    to create inclusive and accessible learning experiences for global audiences.
+                </p>
+                <p>
+                    With a multidimensional background spanning academic research, 
+                    EdTech product development, and global non-profits across the U.S. and China,
+                    I specialize in bridging pedagogical theory with emerging technology.
+                    My experience ranges from optimizing MOOC operations and K-12 products 
+                    to designing AI-integrated curricula for adult learners. 
+                    I combine rigorous user research with data-driven instructional design 
+                    to build scalable, inclusive learning ecosystems that drive engagement and performance.
+                </p>
+                <p>
+                    I believe AI is not a replacement for human connection,
+                    but a bridge to overcome resource barriers and dismantle educational inequality. 
+                    I strive to leverage technology to democratize access to high-quality learning for all.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Expertise Section -->
     <section id="expertise" class="expertise-section">

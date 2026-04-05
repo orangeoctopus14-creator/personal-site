@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yujing Zhang - Instructional Designer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts as fallbacks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        .portfolio-image {
+            height: 200px; /* Fixed height for consistency */
+            overflow: hidden;
+            display: block;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Yujing Zhang</a>
@@ -21,11 +35,11 @@
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="1%20Yujing%20Zhang%20CV%20Academic.pdf" target="_blank" class="nav-resume">Resume</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Designing Meaningful Learning Experiences</h1>
@@ -64,6 +78,22 @@
 
     .about-text {
         flex: 1;
+    }
+
+    .resume-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #8b572a;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+    .resume-btn:hover {
+        background-color: #6a4220;
     }
 
     @media (max-width: 768px) {
@@ -105,6 +135,7 @@
                     but a bridge to overcome resource barriers and dismantle educational inequality. 
                     I strive to leverage technology to democratize access to high-quality learning for all.
                 </p>
+                <a href="1%20Yujing%20Zhang%20CV%20Academic.pdf" target="_blank" class="resume-btn">View My Resume</a>
             </div>
         </div>
     </div>
@@ -353,7 +384,6 @@
 
     </div>
 </section>
-    <!-- Expertise Section -->
     <section id="expertise" class="expertise-section">
         <div class="container">
             <h2 class="section-title">Areas of Expertise</h2>
@@ -390,7 +420,6 @@
                 </div>
             </div>
 
-            <!-- Skills/Tools -->
             <div class="skills-section">
                 <h3 class="subsection-title">Tools & Technologies</h3>
                 <div class="skills-list">
@@ -409,7 +438,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -493,6 +521,8 @@
             <p class="project-description">
                 Managed the development of K-12 digital language products and the end-to-end production of instructional ecosystems. 
                 Coordinated the delivery of interactive courseware and supplementary materials to improve student engagement.
+                <br><br>
+                <em><small>Note: Due to confidentiality, project links are not publicly shareable.</small></em>
             </p>
             <div class="project-tags">
                 <span>Product Delivery</span>
@@ -524,11 +554,8 @@
     </article>
 </div>
 
-
-
             
 
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
@@ -550,8 +577,8 @@
                         <div>
                             <h4>LinkedIn</h4>
                             <a href="https://www.linkedin.com/in/yujingzhang233" target="_blank">
-    https://www.linkedin.com/in/yujingzhang233
-</a>
+                                LinkedIn Profile
+                            </a>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -566,9 +593,6 @@
 
                 <div class="contact-form-wrapper">
                     <form class="contact-form">
-                        <p class="form-note">
-                            <em>Note: Connect this form to Formspree or similar service to receive messages</em>
-                        </p>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -594,10 +618,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2026 Yujing Zhang. All rights reserved.</p>
             <p class="footer-tagline">Designing learning that matters.</p>
         </div>
     </footer>

@@ -15,40 +15,63 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#portfolio">Work</a></li>
-                <li><a href="contact.html" style="color: #111827;">Contact</a></li>
+                <li><a href="contact.html" style="color: #111827; font-weight: 600;">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section style="flex-grow: 1; display: flex; align-items: center;">
-        <div class="container" style="width: 100%;">
+    <section style="flex-grow: 1; display: flex; align-items: center; padding: 60px 0;">
+        <div class="container" style="width: 100%; max-width: 1000px;">
             <div style="text-align: center; margin-bottom: 50px;">
                 <h1 class="section-title" style="margin-bottom: 20px;">Let's Connect</h1>
-                <p style="color: #4B5563; max-width: 500px; margin: 0 auto;">
-                    Interested in collaborating, discussing GenAI in education, or have a project in mind? I'd love to hear from you.
+                <p style="color: #4B5563; max-width: 600px; margin: 0 auto;">
+                    Interested in collaborating or have a project in mind? I'd love to hear from you.
                 </p>
-                <div style="margin-top: 30px;">
-                    <a href="mailto:yujingzh@unc.edu" style="color: #111827; font-weight: 600; text-decoration: none; margin: 0 15px;">📧 yujingzh@unc.edu</a>
-                    <a href="https://www.linkedin.com/in/yujingzhang233" target="_blank" style="color: #111827; font-weight: 600; text-decoration: none; margin: 0 15px;">💼 LinkedIn</a>
-                </div>
             </div>
 
-            <div class="contact-form-wrapper fade-in visible">
-                <form action="https://formspree.io/f/mgopppkq" method="POST" style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #E5E7EB;">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
+                <div class="contact-info" style="background: #fff; padding: 40px; border-radius: 16px; border: 1px solid #E5E7EB;">
+                    
+                    <div style="margin-bottom: 30px;">
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">📧 Email</span>
+                        <a href="mailto:yujingzh@unc.edu" style="color: #111827; text-decoration: none; font-weight: 500;">yujingzh@unc.edu</a>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+
+                    <div style="margin-bottom: 30px;">
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">💼 LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/yujingzhang233" target="_blank" style="color: #111827; text-decoration: none; font-weight: 500;">LinkedIn Profile</a>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div>
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">🌐 Quick Portfolio Links</span>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="https://www.figma.com/proto/IPwVsNekaGKlMUicKkFlYf/EDUC-590---AIgnite-Onboarding-Figma--Copy-?node-id=174-4&t=kibvzkXD0YvhcwhZ-1" target="_blank" style="color: #4B5563; text-decoration: underline;">AIgnite-Onboarding</a>
+                            <a href="https://www.figma.com/proto/z1ZxzwCrSdUa23uJxoK12V/CoSkill-Prototype?node-id=0-1&t=khvAR7GtYxwNEWoW-1" target="_blank" style="color: #4B5563; text-decoration: underline;">CoSkill Platform</a>
+                        </div>
                     </div>
-                    <button type="submit" class="btn-primary" style="width: 100%; margin: 0;">Send Message</button>
-                </form>
+                </div>
+
+                <div class="contact-form-wrapper fade-in visible">
+                    <form action="https://formspree.io/f/mgopppkq" method="POST" style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #E5E7EB;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; margin: 0;">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

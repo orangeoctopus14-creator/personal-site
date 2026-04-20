@@ -2,9 +2,9 @@
    Base & Variables
    ========================================================================== */
 :root {
-    --primary-color: #0f172a;     /* 深石板蓝，显得专业克制 */
-    --accent-color: #ca8a04;      /* 暗金色，点缀高级感 */
-    --bg-light: #f8fafc;          /* 柔和的灰白色背景 */
+    --primary-color: #0f172a;
+    --accent-color: #ca8a04;
+    --bg-light: #f8fafc;
     --text-main: #334155;
     --text-light: #64748b;
     --white: #ffffff;
@@ -35,11 +35,7 @@ h1, h2, h3, h4, .logo {
 
 section { padding: 100px 0; }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
+.section-title { font-size: 2.5rem; margin-bottom: 50px; position: relative; }
 
 .section-subtitle {
     font-size: 1.8rem;
@@ -49,15 +45,10 @@ section { padding: 100px 0; }
     border-bottom: 2px solid var(--border-color);
 }
 
-.section-description {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 50px;
-    max-width: 600px;
-}
+.section-description { font-size: 1.1rem; color: var(--text-light); margin-bottom: 50px; max-width: 600px; }
 
 /* ==========================================================================
-   Navigation
+   Navigation (FIXED: Added max-width & margin)
    ========================================================================== */
 .navbar {
     position: sticky;
@@ -69,7 +60,14 @@ section { padding: 100px 0; }
     padding: 15px 0;
 }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1140px; /* 限制导航栏的最大宽度 */
+    margin: 0 auto;    /* 居中对齐 */
+    padding: 0 24px;   /* 两侧留白 */
+}
 
 .logo { font-size: 1.5rem; text-decoration: none; font-weight: 700; letter-spacing: -0.5px; }
 
@@ -102,7 +100,7 @@ section { padding: 100px 0; }
 .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section (FIXED: Added loadUp animation)
    ========================================================================== */
 .hero {
     height: 90vh;
@@ -113,6 +111,17 @@ section { padding: 100px 0; }
     text-align: center;
     background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
     position: relative;
+}
+
+/* 纯 CSS 首屏加载动画，取代可能失效的 JavaScript 监听 */
+.hero-content {
+    opacity: 0;
+    animation: loadUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes loadUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-title { font-size: 4rem; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px; max-width: 900px; margin-left: auto; margin-right: auto; }
@@ -191,11 +200,10 @@ section { padding: 100px 0; }
 .project-tags span { font-size: 0.8rem; padding: 4px 10px; background: var(--bg-light); color: var(--text-light); border-radius: 4px; font-weight: 500; }
 
 /* ==========================================================================
-   Contact Section (FIXED LAYOUT)
+   Contact Section
    ========================================================================== */
 .contact-section { background-color: var(--bg-light); border-top: 1px solid var(--border-color); }
 
-/* 使用 Grid 将内容分为左右两栏：左侧是联系方式，右侧是表单。这就解决了表单太窄的问题 */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr; 
@@ -203,12 +211,7 @@ section { padding: 100px 0; }
     align-items: start;
 }
 
-.contact-info {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
+.contact-info { background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); }
 
 .contact-method { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 30px; }
 .contact-method:last-child { margin-bottom: 0; }
@@ -218,28 +221,12 @@ section { padding: 100px 0; }
 .contact-method a:hover { color: var(--accent-color); }
 .portfolio-links-vertical { display: flex; flex-direction: column; gap: 8px; }
 
-/* 表单外壳与内部结构 */
-.contact-form-wrapper {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-}
+.contact-form-wrapper { background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; } /* 姓名和邮箱并排 */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .form-group { margin-bottom: 24px; }
 .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--primary-color); }
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    background: var(--bg-light);
-    transition: var(--transition);
-}
+.form-group input, .form-group textarea { width: 100%; padding: 16px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem; background: var(--bg-light); transition: var(--transition); box-sizing: border-box; }
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-color); background: var(--white); box-shadow: 0 0 0 3px rgba(202, 138, 4, 0.1); }
 .contact-form button { width: 100%; }
 
@@ -250,7 +237,7 @@ section { padding: 100px 0; }
 .footer-tagline { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 8px; }
 
 /* ==========================================================================
-   Animations
+   Scroll Animations
    ========================================================================== */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; will-change: opacity, visibility; }
 .fade-in.visible { opacity: 1; transform: none; }
@@ -261,11 +248,11 @@ section { padding: 100px 0; }
 @media (max-width: 900px) {
     .about-content { grid-template-columns: 1fr; }
     .profile-pic { max-width: 350px; margin: 0 auto; display: block; }
-    .contact-content { grid-template-columns: 1fr; /* 手机端让表单和联系方式上下排列 */ }
+    .contact-content { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
     .hero-title { font-size: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; /* 手机端姓名邮箱上下排列 */ }
-    .nav-menu { display: none; } /* 建议后续可添加汉堡菜单 */
+    .form-row { grid-template-columns: 1fr; }
+    .nav-menu { display: none; }
 }

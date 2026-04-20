@@ -25,7 +25,7 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="container hero-content fade-in">
+        <div class="container hero-content">
             <h1 class="hero-title">Designing Meaningful Learning Experiences</h1>
             <p class="hero-subtitle">Instructional Designer | Learning Strategist | EdTech Specialist</p>
             <div class="hero-cta">
@@ -223,7 +223,7 @@
                 <div class="expertise-card">
                     <div class="expertise-icon">💻</div>
                     <h3>AI Product Prototyping</h3>
-                    <p>Prototyping AI-powered platforms for career development and job seeking, and leveraging GenAI tools like ElevenLabs for scalable content creation  and class projects.</p>
+                    <p>Prototyping AI-powered platforms for career development and job seeking, and leveraging GenAI tools like ElevenLabs for scalable content creation and class projects.</p>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon">🎯</div>
@@ -233,7 +233,7 @@
                 <div class="expertise-card">
                     <div class="expertise-icon">🎨</div>
                     <h3>Visual Design</h3>
-                    <p>Creating high-fidelity prototypes in Figma and engaging promotional posters in Photoshop to deliver intuitive, accessible learning interfaces  and class projects.</p>
+                    <p>Creating high-fidelity prototypes in Figma and engaging promotional posters in Photoshop to deliver intuitive, accessible learning interfaces and class projects.</p>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon">📊</div>
@@ -381,3 +381,83 @@
 
             <div class="contact-content">
                 <div class="contact-info">
+                    <div class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:yujingzh@unc.edu">yujingzh@unc.edu</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">💼</span>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/yujingzhang233" target="_blank">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <h4>Portfolio Links</h4>
+                            <div class="portfolio-links-vertical">
+                                <a href="https://www.figma.com/proto/IPwVsNekaGKlMUicKkFlYf/EDUC-590---AIgnite-Onboarding-Figma--Copy-?node-id=174-4&t=kibvzkXD0YvhcwhZ-1" target="_blank">AIgnite-Onboarding</a>
+                                <a href="https://www.figma.com/proto/z1ZxzwCrSdUa23uJxoK12V/CoSkill-Prototype?node-id=0-1&t=khvAR7GtYxwNEWoW-1" target="_blank">CoSkill Platform</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="https://formspree.io/f/mgopppkq" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yujing Zhang. All rights reserved.</p>
+            <p class="footer-tagline">Designing learning that matters.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 将 threshold 调低，保证元素稍微露头就会触发动画
+            const observerOptions = { threshold: 0.05, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
